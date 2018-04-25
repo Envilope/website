@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 var messagesRef = firebase.database().ref('email_list');
 
 // listen to form submit
-document.getElementById('sg-widget').addEventListener('submit',submitForm);
+document.getElementById('sg-widget').addEventListener('submit', submitForm);
 
 //submit form
 function submitForm(e){
@@ -21,10 +21,16 @@ function submitForm(e){
 	var email = getInputVal('sg_email');
 	//save messages
 	saveMessage(email);
+	// show alert error
+	document.querySelector('.error').style.display = 'block';
+	//hide alert after 3 seconds
+	setTimeout(function(){
+		document.querySelector('.error').style.display = 'none';
+	},3000);
 }
 
 function getInputVal(id){
-	return document.getElementById(id).value;
+	return document.getElementById('id').value;
 }
 
 //save message to firebase
@@ -34,3 +40,4 @@ function saveMessage(email){
 		email: email
 	});
 }
+
