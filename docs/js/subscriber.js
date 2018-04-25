@@ -40,7 +40,7 @@ function submitForm1(f){
 	document.querySelector('.sendgrid-subscription-widget .error').style.display = 'block';
 	//hide alert after 3 seconds
 	setTimeout(function(){
-		document.querySelector('.sendgrid-subscription-widget .error').style.display = 'none';
+		document.querySelectorAll('.sendgrid-subscription-widget .error').style.display = 'none';
 	},3000);
 }
 
