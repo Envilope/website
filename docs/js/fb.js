@@ -13,6 +13,7 @@ var messagesRef = firebase.database().ref('email_list');
 
 // listen to form submit
 document.getElementById('sg-widget').addEventListener('submit', submitForm);
+document.getElementById('sg-widget-1').addEventListener('submit', submitForm);
 
 //submit form
 function submitForm(e){
