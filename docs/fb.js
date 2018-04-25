@@ -22,15 +22,15 @@ function submitForm(e){
 	//save messages
 	saveMessage(email);
 	// show alert error
-	document.querySelector('.error').style.display = 'block';
+	document.querySelector('.sendgrid-subscription-widget .error').style.display = 'block';
 	//hide alert after 3 seconds
 	setTimeout(function(){
-		document.querySelector('.error').style.display = 'none';
+		document.querySelector('.sendgrid-subscription-widget .error').style.display = 'none';
 	},3000);
 }
 
 function getInputVal(id){
-	return document.getElementById('id').value;
+	return document.getElementById(id).value;
 }
 
 //save message to firebase
