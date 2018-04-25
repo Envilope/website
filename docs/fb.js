@@ -16,7 +16,7 @@ document.getElementById('sg-widget').addEventListener('submit', submitForm);
 
 //submit form
 function submitForm(e){
-	e.preventDefaut();
+	e.preventDefault();
 	//get values
 	var email = getInputVal('sg_email');
 	//save messages
