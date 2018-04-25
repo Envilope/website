@@ -23,10 +23,10 @@ function submitForm(e){
 	//save messages
 	saveMessage(email);
 	// show alert error
-	document.querySelectorAll('.sendgrid-subscription-widget .error').style.display = 'block';
+	document.querySelector('#sub').style.display = 'block';
 	//hide alert after 3 seconds
 	setTimeout(function(){
-		document.querySelectorAll('.sendgrid-subscription-widget .error').style.display = 'none';
+		document.querySelector('#sub').style.display = 'none';
 	},3000);
 }
 
@@ -37,10 +37,10 @@ function submitForm1(f){
 	//save messages
 	saveMessage(email);
 	// show alert error
-	document.querySelectorAll('.sendgrid-subscription-widget .error').style.display = 'block';
+	document.querySelector('#sub-1').style.display = 'block';
 	//hide alert after 3 seconds
 	setTimeout(function(){
-		document.querySelectorAll('.sendgrid-subscription-widget .error').style.display = 'none';
+		document.querySelector('#sub-1').style.display = 'none';
 	},3000);
 }
 
