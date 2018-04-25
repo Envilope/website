@@ -1288,11 +1288,12 @@ An envilope can only be opened by its intended recipient, and only after accepta
                                         <div class="wpb_wrapper">
                                           <div class="newsletter_wrap style_dark_bg">
                                             <div id="sendgrid-subscription-widget" class="sendgrid-subscription-widget">
-                                              <form id="sg-widget" data-token="e12d423264913752301383bc26bec3ab" onsubmit="return false;">
-                                                <div class="sg-response" id="sg-response"></div>
-                                                <input id="sg_email" type="email" name="sg_email" placeholder="Please enter your email address" required>
+                                              <form id="sg-widget" class="success-none">
+                                                <div class="inputs">
+                                                  <input id="sg_email" type="email" name="sg_email" placeholder="Please enter your email address" required>
+                                                  </div>
                                                 <br>
-                                                <input type="submit" id="sg-submit-btn" value="KEEP ME POSTED">
+                                                  <input style="float: center" type="submit" id="sg-submit-btn" value="KEEP ME POSTED">
                                               </form>
                                             </div>
                                           </div>
@@ -2274,11 +2275,12 @@ An envilope can only be opened by its intended recipient, and only after accepta
                                                         <!--<p>Start the KYC process today so that you’ll be ready to move forward when the public sale opens.</p>-->
                                                       </div>
                                                       <div id="sendgrid-subscription-widget" class="sendgrid-subscription-widget">
-                                                        <form id="sg-widget" data-token="e12d423264913752301383bc26bec3ab" onsubmit="return false;">
-                                                          <div class="sg-response" id="sg-response"></div>
-                                                          <input id="sg_email" type="email" name="sg_email" placeholder="Please enter your email address" required>
+                                                        <form id="sg-widget" class="success-none">
+                                                          <div class="inputs">
+                                                            <input id="sg_email" type="email" name="sg_email" placeholder="Please enter your email address" required>
+                                                            </div>
                                                           <br>
-                                                          <input style="float: center" type="submit" id="sg-submit-btn" value="KEEP ME POSTED">
+                                                            <input style="float: center" type="submit" id="sg-submit-btn" value="KEEP ME POSTED">
                                                         </form>
                                                       </div>
                                                       <div class="uncode_text_column footer">
@@ -2495,6 +2497,32 @@ An envilope can only be opened by its intended recipient, and only after accepta
 var ctf = {"ajax_url":"http:\/\/envilope.icsandbox.com\/wp-admin\/admin-ajax.php"};
 /* ]]> */
 </script> -->
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	  if ($('#sg-widget').length > 0 ) {
+	      contactScript('forcontact');
+	  }
+	});
+	//firebase
+	function contactScript(value) {
+	  var a = { 
+	    apiKey: "AIzaSyBY-95bWNWqWgJ9qWq30x9frdUgNsZO51s",
+	    authDomain: "envilope-token.firebaseapp.com",
+	    databaseURL: "https://envilope-token.firebaseio.com",
+	    projectId: "envilope-token",
+	    storageBucket: "envilope-token.appspot.com",
+	    messagingSenderId: "210701361373" };
+	  firebase.initializeApp(a);
+	  var b = firebase.database().ref("messages");
+	      $("#sg-widget").submit(function(a) { $(this), console.log("Submit to Firebase");
+	      var d = $("#email").val(),
+	          f = {email: d};
+	      return b.push(f).then(function(a) { 
+	          $(".success").css("display", "block"), 
+	          $(".success-none").css("display", "none") }), !1 })   
+	}
+	</script>
   <script type='text/javascript' src='plugins/custom-twitter-feeds/js/ctf-scripts.js?ver=1.2.8'></script>
   <script type="text/javascript" src="//sgwidget.leaderapps.co/js/sendgrid-widget.js"></script>
   <!-- <script type='text/javascript'>
