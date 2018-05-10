@@ -2457,15 +2457,22 @@ An envilope can only be opened by its intended recipient, and only after accepta
                                           <div class="uncont">
                                             <div class="uncode_text_column" >
                                               <!-- Custom Twitter Feeds by Smash Balloon -->
-                                              <a class="twitter-timeline"
-                                                  href="https://twitter.com/envilope?ref_src=twsrc%5Etfw"
-                                                  data-height="400"
-                                                  data-chrome="nofooter noheader transparent"
-                                                  data-link-color="#6921cf"
-                                                  data-border-color="#6921cf">
-                                                  Tweets by @envilope 
-                                              </a> 
-                                              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                              <div class=”twitter-block”>
+                                                <a class="twitter-timeline"
+                                                    href="https://twitter.com/envilope?ref_src=twsrc%5Etfw"
+                                                    data-height="400"
+                                                    data-chrome="nofooter noheader transparent"
+                                                    data-link-color="#6921cf"
+                                                    data-border-color="#6921cf">
+                                                    Tweets by @envilope 
+                                                </a> 
+                                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                                <script type="text/javascript">
+                                                  jQuery('.twitter-block').on('DOMSubtreeModified propertychange',"#twitter-widget-0", function() {
+                                                    hideTweetMedia();
+                                                  });
+                                                </script>
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
