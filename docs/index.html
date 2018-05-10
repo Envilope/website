@@ -110,16 +110,7 @@
     type='text/css' media='all' />
   <!--<script type='text/javascript' src='https://platform.twitter.com/widgets.js?ver=4.9.5'></script>-->
   <script type='text/javascript' src='js/jquery/jquery.js?ver=1.12.4'></script>
-  <script type='text/javascript' src='js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-  <script type='text/javascript'>
-    var hideTweetMedia = function(){
-      jQuery(".twitter-block").find(".twitter-timeline").contents().find(".timeline-Tweet-media").css("display", "none");
-      jQuery(".twitter-block").css("height", "100%");
-      jQuery(".twitter-block").find(".twitter-timeline").contents().find(".timeline-TweetList").bind('DOMSubtreeModified propertychange', function(){
-        hideTweetMedia(this);
-      });
-    }
-  </script>
+  <script type='text/javascript' src='js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>  
   <script type='text/javascript' src='themes/envilope/js/custom.js?ver=4.9.5'></script>
   <script type='text/javascript' src='https://addevent.com/libs/atc/1.6.1/atc.min.js?ver=4.9.5'></script>
   <script type='text/javascript'>
@@ -2560,6 +2551,22 @@ var uncode_irecommendthis = {"i18n":"You already recommended this","ajaxurl":"ht
   <script type='text/javascript' src='themes/uncode/library/js/app.js?ver=769587783'></script>
   <script type='text/javascript' src='js/wp-embed.min.js?ver=4.9.5'></script>
   <script type='text/javascript' src='plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.2.6.5'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    jQuery.noConflict();
+    jQuery(document).ready(function() {
+      jQuery('.twitter-block').on('DOMSubtreeModified propertychange','iframe.twitter-timeline', function(event) {
+        hideTweetMedia(jQuery(event.currentTarget).prop('id'));
+      });
+      var hideTweetMedia = function(timelineId) {
+        console.log(jQuery('#'+ timelineId));
+        jQuery('#' + timelineId).contents().find('.timeline-Tweet-media').css('display', 'none');
+        jQuery('#' + timelineId).contents().find('.timeline-TweetList').bind('DOMSubtreeModified propertychange', function() {
+          hideTweetMedia(timelineId);
+        });
+      }
+      });
+  </script>
 </body>
 
 </html>
