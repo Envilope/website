@@ -111,6 +111,15 @@
   <!--<script type='text/javascript' src='https://platform.twitter.com/widgets.js?ver=4.9.5'></script>-->
   <script type='text/javascript' src='js/jquery/jquery.js?ver=1.12.4'></script>
   <script type='text/javascript' src='js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+  <script type='text/javascript'>
+    var hideTweetMedia = function(){
+      jQuery(".twitter-block").find(".twitter-timeline").contents().find(".timeline-Tweet-media").css("display", "none");
+      jQuery(".twitter-block").css("height", "100%");
+      jQuery(".twitter-block").find(".twitter-timeline").contents().find(".timeline-TweetList").bind('DOMSubtreeModified propertychange', function(){
+        hideTweetMedia(this);
+      });
+    }
+  </script>
   <script type='text/javascript' src='themes/envilope/js/custom.js?ver=4.9.5'></script>
   <script type='text/javascript' src='https://addevent.com/libs/atc/1.6.1/atc.min.js?ver=4.9.5'></script>
   <script type='text/javascript'>
@@ -2467,11 +2476,6 @@ An envilope can only be opened by its intended recipient, and only after accepta
                                                     Tweets by @envilope 
                                                 </a> 
                                                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                                <script type="text/javascript">
-                                                  jQuery('.twitter-block').on('DOMSubtreeModified propertychange',"#twitter-widget-0", function() {
-                                                    hideTweetMedia();
-                                                  });
-                                                </script>
                                               </div>
                                             </div>
                                           </div>
