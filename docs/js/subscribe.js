@@ -1,11 +1,11 @@
 // Initialize Firebase
 var config = {
-	apiKey: "AIzaSyBY-95bWNWqWgJ9qWq30x9frdUgNsZO51s",
-	authDomain: "envilope-token.firebaseapp.com",
-	databaseURL: "https://envilope-token.firebaseio.com",
-	projectId: "envilope-token",
-	storageBucket: "envilope-token.appspot.com",
-	messagingSenderId: "210701361373"
+	apiKey: "AIzaSyCam3_FZiFUpfJU48MbxfyqcNYz-jmvy5w",
+	authDomain: "cryptobase-192312.firebaseapp.com",
+	databaseURL: "https://cryptobase-192312.firebaseio.com",
+	projectId: "cryptobase-192312",
+	storageBucket: "cryptobase-192312.appspot.com",
+	messagingSenderId: "17310601752"
 };
 firebase.initializeApp(config);
   
