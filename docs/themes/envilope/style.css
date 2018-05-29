@@ -152,7 +152,7 @@ body .style-light h2, body .style-light h3 {
   color: #d4d4d4 !important; }
 
 a {
-  color: #6452F1;
+  /*color: #6452F1;*/
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   -webkit-box-shadow: 0 0 1px transparent;
