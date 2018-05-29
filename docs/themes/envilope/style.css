@@ -152,6 +152,7 @@ body .style-light h2, body .style-light h3 {
   color: #d4d4d4 !important; }
 
 a {
+  color: #6452F1;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   -webkit-box-shadow: 0 0 1px transparent;
@@ -663,17 +664,19 @@ footer {
             font-size: 18px !important; } }
       #menu-connect-with-us li.menu-item a:hover:before, .menu-connect-with-us .menu-horizontal li.menu-item a:hover:before {
         opacity: .8; }
+    #menu-connect-with-us li.menu-item.gray_icon a:before, .menu-connect-with-us .menu-horizontal li.menu-item.gray_icon a:before {
+      color: #a7a6b5; }
     #menu-connect-with-us li.menu-item.menu-item-330 a:before, .menu-connect-with-us .menu-horizontal li.menu-item.menu-item-330 a:before {
       content: '\f081'; }
     #menu-connect-with-us li.menu-item.menu-item-331 a:before, .menu-connect-with-us .menu-horizontal li.menu-item.menu-item-331 a:before {
       content: '\f082'; }
     #menu-connect-with-us li.menu-item.menu-item-332 a:before, .menu-connect-with-us .menu-horizontal li.menu-item.menu-item-332 a:before {
       content: '\f16d'; }
-    #menu-connect-with-us li.menu-item.menu-item-333 a:before, .menu-connect-with-us .menu-horizontal li.menu-item.menu-item-333 a:before {
+    #menu-connect-with-us li.menu-item.telegram a:before, #menu-connect-with-us li.menu-item.menu-item-333 a:before, .menu-connect-with-us .menu-horizontal li.menu-item.telegram a:before, .menu-connect-with-us .menu-horizontal li.menu-item.menu-item-333 a:before {
       content: '\f2c6'; }
-    #menu-connect-with-us li.menu-item.menu-item-334 a:before, .menu-connect-with-us .menu-horizontal li.menu-item.menu-item-334 a:before {
+    #menu-connect-with-us li.menu-item.reddit a:before, #menu-connect-with-us li.menu-item.menu-item-334 a:before, .menu-connect-with-us .menu-horizontal li.menu-item.reddit a:before, .menu-connect-with-us .menu-horizontal li.menu-item.menu-item-334 a:before {
       content: '\f281'; }
-    #menu-connect-with-us li.menu-item.menu-item-335 a:before, .menu-connect-with-us .menu-horizontal li.menu-item.menu-item-335 a:before {
+    #menu-connect-with-us li.menu-item.bitcoin a:before, #menu-connect-with-us li.menu-item.menu-item-335 a:before, .menu-connect-with-us .menu-horizontal li.menu-item.bitcoin a:before, .menu-connect-with-us .menu-horizontal li.menu-item.menu-item-335 a:before {
       content: '\f15a'; }
     #menu-connect-with-us li.menu-item.linkedin a:before, .menu-connect-with-us .menu-horizontal li.menu-item.linkedin a:before {
       content: '\f0e1'; }
@@ -996,6 +999,19 @@ body.page .newsletter_wrap {
     border: 1px solid #6452F1; }
     body.page .newsletter_wrap.style_dark_bg #gform_confirmation_message_1 h3, body.page .newsletter_wrap.style_dark_bg #gform_confirmation_message_2 h3 {
       color: #6452F1; }
+
+/* Widget */
+h3.widget-title {
+  color: #333 !important;
+  font-size: 20px !important; }
+
+h3.t-entry-title.h6 {
+  font-size: 33px !important;
+  font-weight: 300 !important;
+  color: #333 !important; }
+
+p.t-entry-meta {
+  margin-top: 1px !important; }
 
 /* ================== */
 /* HOME */
