@@ -8802,7 +8802,7 @@ div[class*=shift_y_neg].shift_y_neg_single .isotope-filters ul.menu-smart > li >
   user-select: none;
 }
 .ilightbox-closedhand * {
-  cursor: url('../img/ilightbox/css/closedhand.cur.html'), default !important;
+  cursor: url('../img/ilightbox/css/closedhand.cur'), default !important;
 }
 .ilightbox-overlay {
   display: none;
