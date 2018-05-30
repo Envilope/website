@@ -10149,7 +10149,7 @@ div[class*=shift_y_neg].shift_y_neg_single .isotope-filters ul.menu-smart > li >
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url(http://envilope.icsandbox.com/wp-content/themes/uncode/library/css/owl.video.play.png) no-repeat;
+  background: url(owl.video.play.png) no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -14933,7 +14933,7 @@ video.wp-video-shortcode,
 }
 .mejs-captions-text {
   padding: 3px 5px;
-  background: url(http://envilope.icsandbox.com/wp-content/themes/uncode/library/css/background.png);
+  background: url(background.png);
   background: rgba(20, 20, 20, 0.8);
 }
 .me-cannotplay a {
