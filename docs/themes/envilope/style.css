@@ -631,7 +631,7 @@ footer {
     #menu-connect-with-us li.menu-item:nth-child(1) a, .menu-connect-with-us .menu-horizontal li.menu-item:nth-child(1) a {
       padding-left: 0px; }
     #menu-connect-with-us li.menu-item a, .menu-connect-with-us .menu-horizontal li.menu-item a {
-      padding: 0px 18px 0px 18px;
+      padding: 0px 15px 0px 15px;
       font-size: 0px; }
       @media (max-width: 959px) {
         #menu-connect-with-us li.menu-item a, .menu-connect-with-us .menu-horizontal li.menu-item a {
